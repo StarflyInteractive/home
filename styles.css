@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "headerFont";
+  src: url(Blueberry .ttf);
+}
+@font-face {
+  font-family: "paraFont";
+  src: url(DancingScript-Regular.ttf);
+}
+
+/* styles.css */
+nav ul li a:hover {
+  color: gray;
+}
+
+
+
+header {	
+  background-color: #fde8e8;
+  text-align: center;
+  padding: 20px;
+  	font-family: 'headerFont';	
+}
+
+nav {
+  background-color: #f9b9b9;
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+section {
+	  background-color: #fde8e8;
+color: black;
+	font-family: 'paraFont';
+  padding: 20px;
+}
+
+footer {
+  background-color: #f9b9b9;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

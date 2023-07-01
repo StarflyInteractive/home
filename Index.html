@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Starfly Interactive - Where Cute Meets Cozy</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+nav ul li a:hover {
+  color: gray;
+}
+
+    .slideshow {
+      position: relative;
+      width: calc(100% - 40px); /* Updated width to be 20 pixels shorter on both sides */
+      height: 300px;
+      overflow: hidden;
+      margin: 0 auto; /* Center the slideshow */
+    }
+
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slideshow img.previous {
+      opacity: 1;
+      transform: translateX(-100%);
+      transition: transform 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Starfly Interactive</h1>
+    <h2>(Indie games at its finest)</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="file:///C:/Users/SorkariPC/Desktop/blog.html">Home</a></li>
+      <li><a href="#">Blog Library</a></li>
+      <li><a href="file:///C:/Users/SorkariPC/Desktop/aboutMe.html">About Founder</a></li>
+    </ul>
+  </nav>
+
+  <section class="slideshow">
+    <img src="cover.png" class="active">
+    <img src="ZZZZZZZZZZZZZZZZ2.png">
+  </section>
+
+  <section>
+    <h3>Welcome to Starfly Interactive!</h3>
+    <p>StartFly Interactive is an exciting new indie game studio that is poised to make a significant impact in the gaming industry. With a fresh and innovative approach to game development, StartFly Interactive is all about creating unique and memorable gaming experiences. The studio is driven by a team of passionate and dedicated individuals who are fueled by their love for games and their desire to create something extraordinary. StartFly Interactive embraces the freedom and creativity that comes with being an indie studio, allowing them to take risks, explore new ideas, and challenge traditional gaming conventions. Their games are characterized by their artistic flair, immersive gameplay mechanics, and thought-provoking narratives. StartFly Interactive is committed to delivering high-quality games that resonate with players and leave a lasting impression. As they soar through the gaming industry, StartFly Interactive is set to leave their mark and establish themselves as a force to be reckoned with.</p>
+
+    <h3>Our Creations</h3>
+    <p>We are happy to introduce you to our upcoming new game called "Dristopia" a mysterious storydriven small survival game. the artstyle and the story makes this game stand out from the rest of the survival games </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Starfly Interactive. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const images = document.querySelectorAll('.slideshow img');
+    let currentImage = 0;
+
+    setInterval(() => {
+      images[currentImage].classList.remove('active');
+      images[currentImage].classList.add('previous');
+      currentImage = (currentImage + 1) % images.length;
+      images[currentImage].classList.add('active');
+      setTimeout(() => {
+        images[currentImage].classList.remove('previous');
+      }, 1000); // Delay removing 'previous' class to match the duration of the transition
+    }, 3000);
+  </script>
+</body>
+</html>
